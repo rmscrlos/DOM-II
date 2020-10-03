@@ -1,4 +1,8 @@
 // Your code goes here
+import { gsap } from 'gsap';
+import { TextPlugin } from 'gsap/TextPlugin';
+
+gsap.registerPlugin(TextPlugin);
 
 // 1. footer - mouse enter
 const footer = document.querySelector('.footer > p');
@@ -37,7 +41,7 @@ function getRdm() {
 	return Math.floor(Math.random() * hex.length);
 }
 
-// 5. keydown - logo will show you all the keys you press
+// 5. wheel - logo will show you all the keys you press
 const logo = document.querySelector('.logo-heading');
 
 logo.addEventListener('wheel', (e) => {
@@ -109,3 +113,6 @@ nav.addEventListener('click', (e) => {
 header.addEventListener('click', (e) => {
 	header.style.backgroundColor = 'green';
 });
+
+// stretch - animatin text
+let mySplitText = new SplitText('#quote');
