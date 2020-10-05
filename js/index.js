@@ -115,4 +115,14 @@ header.addEventListener('click', (e) => {
 });
 
 // stretch - animatin text
-let mySplitText = new SplitText('#quote');
+const txt = document.querySelector('#quote');
+console.log(txt);
+
+gsap.to(txt, {
+	duration: 2,
+	text: {
+		value: 'Welcome to the hunger games! lol!',
+		delimiter: ' '
+	},
+	ease: 'none'
+});
